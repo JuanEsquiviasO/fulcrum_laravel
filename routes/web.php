@@ -11,17 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    $links = [
-				'https://en.wikipedia.org/wiki/Mikoyan_MiG-29' => 'Mikoyan MiG-29',
-				'https://en.wikipedia.org/wiki/Mikoyan_MiG-29K' => 'Mikoyan MiG-29K'
-		];
-		return view('welcome', [
-			// 'origin' => 'Mikoyan',
-			'links' => $links,
-		]);
-});
+Route::get('/', 'PagesController@home');
 
-Route::get('/about', function () {
-	return view('about');
-});
+Route::get('/about', 'PagesController@aboutUs');

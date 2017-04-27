@@ -85,7 +85,7 @@
 								@if (isset($origin))
 								<p>Manufacturer: {{ $origin }}</p>
 								@else
-								<p>to define</p>
+								<p>Manufacturer unknow</p>
 								@endif
 
                 <div class="links">
