@@ -8,18 +8,31 @@ class PagesController extends Controller
 {
 	public function home()
 	{
-		$links = [
-			'https://en.wikipedia.org/wiki/Mikoyan_MiG-29' => 'Mikoyan MiG-29',
-			'https://en.wikipedia.org/wiki/Mikoyan_MiG-29K' => 'Mikoyan MiG-29K'
+		$messages = [
+			[
+				'id' => 1,
+				'content' => 'This is my first message',
+				'image' => 'http://lorempixel.com/600/338?1',
+			],
+			[
+				'id' => 2,
+				'content' => 'This is my second message',
+				'image' => 'http://lorempixel.com/600/338?2',
+			],
+			[
+				'id' => 3,
+				'content' => 'This is my third message',
+				'image' => 'http://lorempixel.com/600/338?3',
+			],
+			[
+				'id' => 4,
+				'content' => 'This is my fourth message',
+				'image' => 'http://lorempixel.com/600/338?4',
+			],
 		];
-		return view('welcome', [
-			// 'origin' => 'Mikoyan',
-			'links' => $links,
-		]);
-	}
 
-	public function aboutUs()
-	{
-		return view('about');
+		return view('welcome', [
+			'messages' => $messages,
+		]);
 	}
 }
